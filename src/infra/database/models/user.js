@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) => {
         isEmail: true
       }
     },
-    password: DataTypes.STRING
+
+    password: DataTypes.STRING,
+
+    active: DataTypes.BOOLEAN
 
   }, {
     tableName: 'users'

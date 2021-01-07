@@ -12,6 +12,12 @@ module.exports = {
         allowNull: false
       },
 
+      active: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        default: false
+      },
+
       password: {
         type: Sequelize.STRING,
         allowNull: false
