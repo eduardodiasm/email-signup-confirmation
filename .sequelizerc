@@ -1,0 +1,11 @@
+process.env.NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'
+
+require('./src/config/environments/').setEnvironment()
+const path = require('path')
+
+module.exports = {
+  config: path.resolve('src', 'config', 'database.js'),
+  'models-path': path.resolve('src', 'infra', 'models'),
+  'seeders-path': path.resolve('src', 'infra', 'database', 'seeders'),
+  'migrations-path': path.resolve('src', 'infra', 'database', 'migrations'),
+}
