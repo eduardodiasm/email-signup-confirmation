@@ -1,5 +1,13 @@
 const router = require('express').Router()
+const userService = require('../domain/users/service')()
 
-router.get('/users', (req, res) => res.send('users endpoint'))
+router.post('/', async (req, res) => {
+
+  const { email, password } = req.body
+
+  const user = await userService.createUser({ email, password })
+
+  return res.json(user)
+})
 
 module.exports = router
