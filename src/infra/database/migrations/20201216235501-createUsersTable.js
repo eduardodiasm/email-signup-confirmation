@@ -15,7 +15,7 @@ module.exports = {
       active: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        default: false
+        defaultValue: false
       },
 
       password: {
